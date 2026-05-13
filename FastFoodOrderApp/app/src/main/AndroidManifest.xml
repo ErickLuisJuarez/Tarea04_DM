@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fastfoodorderapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_food"
+        android:label="Fast Food Ordering System"
+        android:theme="@style/Theme.FastFoodOrderApp">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ResumenPedidoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Configuración"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
+
+</manifest>

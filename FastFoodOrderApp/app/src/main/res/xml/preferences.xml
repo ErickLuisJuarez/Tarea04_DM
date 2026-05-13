@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- CATEGORÍA: GENERAL -->
+    <PreferenceCategory android:title="📱 General">
+
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Notificaciones push"
+            android:summary="Recibir alertas de pedidos y ofertas"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="sonido"
+            android:title="Sonidos"
+            android:summary="Reproducir sonido al confirmar pedido"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="vibracion"
+            android:title="Vibración"
+            android:summary="Vibrar al completar acciones"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- CATEGORÍA: APARIENCIA -->
+    <PreferenceCategory android:title="🎨 Apariencia">
+
+        <ListPreference
+            android:key="tema"
+            android:title="Tema"
+            android:summary="Elige el tema de la aplicación"
+            android:entries="@array/tema_entries"
+            android:entryValues="@array/tema_values"
+            android:defaultValue="claro" />
+
+        <ListPreference
+            android:key="tamano_letra"
+            android:title="Tamaño de letra"
+            android:summary="Ajusta el tamaño del texto"
+            android:entries="@array/letra_entries"
+            android:entryValues="@array/letra_values"
+            android:defaultValue="medio" />
+
+    </PreferenceCategory>
+
+    <!-- CATEGORÍA: PEDIDOS -->
+    <PreferenceCategory android:title="🛒 Pedidos">
+
+        <EditTextPreference
+            android:key="nombre_cliente"
+            android:title="Nombre del cliente"
+            android:summary="Nombre para tus pedidos"
+            android:defaultValue="" />
+
+        <SwitchPreferenceCompat
+            android:key="confirmacion_rapida"
+            android:title="Confirmación rápida"
+            android:summary="Confirmar pedido sin mostrar resumen"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="metodo_pago"
+            android:title="Método de pago predeterminado"
+            android:summary="Selecciona tu forma de pago"
+            android:entries="@array/pago_entries"
+            android:entryValues="@array/pago_values"
+            android:defaultValue="efectivo" />
+
+    </PreferenceCategory>
+
+    <!-- CATEGORÍA: INFORMACIÓN -->
+    <PreferenceCategory android:title="ℹ️ Información">
+
+        <Preference
+            android:key="version"
+            android:title="Versión de la app"
+            android:summary="1.0.0"
+            android:selectable="false" />
+
+        <Preference
+            android:key="desarrollador"
+            android:title="Desarrollado por"
+            android:summary="Tu Nombre - 2024"
+            android:selectable="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

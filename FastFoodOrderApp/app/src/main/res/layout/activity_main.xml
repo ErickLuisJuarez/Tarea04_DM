@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/toolbar_color"
+                android:elevation="8dp"
+                app:titleTextColor="@color/white"
+                app:navigationIconTint="@color/white"
+                app:menu="@menu/action_menu"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍔 Fast Food"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📋 MENÚ DEL DÍA"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="16dp"
+                        android:letterSpacing="0.05"/>
+
+                    <!-- TARJETA HAMBURGUESA -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHamburguesa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#FFE0CC">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/hamburguesa"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/card_image_background"/>
+
+                            <LinearLayout
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="🍔 Hamburguesa Clásica"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/text_primary"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$5.99 c/u"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/text_price"
+                                    android:layout_marginTop="4dp"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:gravity="center_vertical">
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMenosHamburguesa"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="-"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="#FFE0CC"
+                                        android:textColor="@color/primary"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                                    <TextView
+                                        android:id="@+id/tvHamburguesa"
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary"
+                                        android:gravity="center"
+                                        android:layout_marginHorizontal="8dp"/>
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMasHamburguesa"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="+"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="@color/primary"
+                                        android:textColor="@color/white"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TARJETA PAPAS -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPapas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#FFF3E0">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/papas"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/card_image_background"/>
+
+                            <LinearLayout
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="🍟 Papas Fritas"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/text_primary"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$3.99 c/u"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/text_price"
+                                    android:layout_marginTop="4dp"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:gravity="center_vertical">
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMenosPapas"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="-"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="#FFF3E0"
+                                        android:textColor="@color/primary"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                                    <TextView
+                                        android:id="@+id/tvPapas"
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary"
+                                        android:gravity="center"
+                                        android:layout_marginHorizontal="8dp"/>
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMasPapas"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="+"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="@color/primary"
+                                        android:textColor="@color/white"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TARJETA REFRESCO -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRefresco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#E0F2F1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/refresco"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/card_image_background"/>
+
+                            <LinearLayout
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="🥤 Refresco"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/text_primary"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$2.99 c/u"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/text_price"
+                                    android:layout_marginTop="4dp"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:gravity="center_vertical">
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMenosRefresco"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="-"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="#E0F2F1"
+                                        android:textColor="@color/primary"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                                    <TextView
+                                        android:id="@+id/tvRefresco"
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary"
+                                        android:gravity="center"
+                                        android:layout_marginHorizontal="8dp"/>
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMasRefresco"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="+"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="@color/primary"
+                                        android:textColor="@color/white"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- TARJETA HELADO -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHelado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="80dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@color/card_background"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#FCE4EC">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/helado"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/card_image_background"/>
+
+                            <LinearLayout
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="🍦 Helado"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/text_primary"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$2.49 c/u"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/text_price"
+                                    android:layout_marginTop="4dp"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:gravity="center_vertical">
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMenosHelado"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="-"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="#FCE4EC"
+                                        android:textColor="@color/primary"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                                    <TextView
+                                        android:id="@+id/tvHelado"
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary"
+                                        android:gravity="center"
+                                        android:layout_marginHorizontal="8dp"/>
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnMasHelado"
+                                        android:layout_width="44dp"
+                                        android:layout_height="44dp"
+                                        android:text="+"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:cornerRadius="22dp"
+                                        app:backgroundTint="@color/primary"
+                                        android:textColor="@color/white"
+                                        android:insetTop="0dp"
+                                        android:insetBottom="0dp"
+                                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="24dp"
+            android:src="@android:drawable/ic_menu_send"
+            app:backgroundTint="@color/accent"
+            app:tint="@color/text_primary"
+            app:fabSize="normal"
+            android:elevation="8dp"
+            android:contentDescription="Enviar pedido"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:menu="@menu/drawer_menu"
+        app:itemTextColor="@color/text_primary"
+        app:itemIconTint="@color/primary"
+        android:fitsSystemWindows="true"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

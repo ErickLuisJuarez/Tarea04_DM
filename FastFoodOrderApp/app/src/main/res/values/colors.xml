@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales -->
+    <color name="primary">#FF6B35</color>          <!-- Naranja comida -->
+    <color name="primary_dark">#E55A2B</color>
+    <color name="primary_light">#FF8C5A</color>
+    <color name="accent">#FFC107</color>            <!-- Amarillo Dorado -->
+
+    <!-- Fondos -->
+    <color name="background">#FFF8F0</color>        <!-- Crema claro -->
+    <color name="white">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Textos -->
+    <color name="text_primary">#2D2D2D</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_price">#FF6B35</color>
+
+    <!-- Botones -->
+    <color name="button_remove">#FF4444</color>
+    <color name="button_add">#4CAF50</color>
+    <color name="button_confirm">#4CAF50</color>
+    <color name="button_cancel">#F44336</color>
+
+    <!-- Toolbar -->
+    <color name="toolbar_color">#FF6B35</color>
+    <color name="status_bar">#E55A2B</color>
+
+    <!-- Íconos -->
+    <color name="icon_color">#FFFFFF</color>
+</resources>

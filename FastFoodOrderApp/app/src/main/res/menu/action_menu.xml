@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Buscar"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_configuración"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="Configuración"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_cancelar"
+        android:title="Cancelar pedido"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_reenviar"
+        android:title="Reenviar último"
+        app:showAsAction="never"/>
+
+</menu>
